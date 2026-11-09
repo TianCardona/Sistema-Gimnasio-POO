@@ -69,15 +69,10 @@ Al ejecutar `main.py` se muestran:
 - captura de las 3 excepciones personalizadas con `try/except`,
 - continuidad del sistema tras los errores.
 
-## Integrantes
+## Integrante
 
-- *(Nombre del integrante 1)*
-- *(Nombre del integrante 2)*
-- *(Nombre del integrante 3)*
-- *(Nombre del integrante 4)*
-- *(Nombre del integrante 5, si aplica)*
+- **Cristian Camilo Alzate Cardona** — C.C. 11992726014
 
-> Cada integrante debe realizar al menos un commit con una contribución real al desarrollo.
 
 ## Uso de herramientas de inteligencia artificial
 

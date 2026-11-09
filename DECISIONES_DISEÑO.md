@@ -3,14 +3,10 @@
 
 **Curso:** Programación Orientada a Objetos  
 **Proyecto:** Sistema de Gestión de Gimnasio  
-**Repositorio:** *(Completar con el enlace del repositorio de GitHub del proyecto final)*  
+**Repositorio:** *(Pendiente: crear repositorio en GitHub y pegar el enlace aquí)*  
 
-### Integrantes
-- *(Nombre completo - integrante 1)*
-- *(Nombre completo - integrante 2)*
-- *(Nombre completo - integrante 3)*
-- *(Nombre completo - integrante 4)*
-- *(Nombre completo - integrante 5, si aplica)*
+### Integrante
+- **Cristian Camilo Alzate Cardona** — C.C. 11992726014
 
 ---
 
