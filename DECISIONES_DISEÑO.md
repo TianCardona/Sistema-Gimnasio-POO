@@ -3,7 +3,7 @@
 
 **Curso:** Programación Orientada a Objetos  
 **Proyecto:** Sistema de Gestión de Gimnasio  
-**Repositorio:** *(Pendiente: crear repositorio en GitHub y pegar el enlace aquí)*  
+**Repositorio:** https://github.com/TianCardona/Sistema-Gimnasio-POO  
 
 ### Integrante
 - **Cristian Camilo Alzate Cardona** — C.C. 11992726014
