@@ -1,0 +1,101 @@
+@startuml
+title Sistema de Gestión de Gimnasio - Diagrama de Clases
+
+abstract class PersonaGimnasio {
+  - _identificacion
+  - _nombre
+  - _correo
+  - _telefono
+  + get_identificacion()
+  + get_nombre()
+  + get_correo()
+  + get_telefono()
+  + set_nombre(nombre)
+  + set_correo(correo)
+  + set_telefono(telefono)
+  {abstract} + mostrar_informacion()
+  {abstract} + obtener_beneficio_principal()
+}
+
+class MiembroRegular {
+  - _membresia : Membresia
+  - _fecha_ingreso
+  - _visitas_mes
+  + registrar_visita()
+  + calcular_costo_mensual()
+  + mostrar_informacion()
+  + obtener_beneficio_principal()
+}
+
+class MiembroPremium {
+  - _membresia : Membresia
+  - _fecha_ingreso
+  - _rutina : RutinaPersonalizada
+  - _sesiones_entrenador_mes
+  + get_rutina()
+  + agendar_sesion_entrenador()
+  + calcular_costo_mensual()
+  + mostrar_informacion()
+  + obtener_beneficio_principal()
+}
+
+class Entrenador {
+  - _especialidad
+  - _anos_experiencia
+  - _tarifa_sesion
+  - _sesiones_realizadas
+  + registrar_sesion()
+  + calcular_pago_estimado_mes(sesiones_mes)
+  + mostrar_informacion()
+  + obtener_beneficio_principal()
+}
+
+class Membresia {
+  - _tipo
+  - _precio_base
+  - _fecha_vencimiento
+  - _activa
+  + validar_vigencia()
+  + activar()
+  + desactivar()
+}
+
+class RutinaPersonalizada {
+  - _objetivo
+  - _ejercicios
+  - _duracion_semanas
+  + agregar_ejercicio(ejercicio)
+  + mostrar_resumen()
+}
+
+class ReservaClase {
+  - _nombre_clase
+  - _fecha
+  - _hora
+  - _entrenador : Entrenador
+  - _cupo_maximo
+  - _miembros_inscritos
+  + inscribir_miembro(miembro)
+  + cancelar_inscripcion(miembro)
+  + listar_inscritos()
+}
+
+class GimnasioException <<exception>>
+class MembresiaVencidaException <<exception>>
+class CupoClaseException <<exception>>
+class ReservaInvalidaException <<exception>>
+
+PersonaGimnasio <|-- MiembroRegular
+PersonaGimnasio <|-- MiembroPremium
+PersonaGimnasio <|-- Entrenador
+
+MiembroRegular --> Membresia
+MiembroPremium --> Membresia
+MiembroPremium *-- RutinaPersonalizada : composición
+ReservaClase --> Entrenador
+ReservaClase --> PersonaGimnasio : miembros inscritos
+
+GimnasioException <|-- MembresiaVencidaException
+GimnasioException <|-- CupoClaseException
+GimnasioException <|-- ReservaInvalidaException
+@enduml
